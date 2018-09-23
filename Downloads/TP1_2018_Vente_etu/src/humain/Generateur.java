@@ -7,7 +7,13 @@ import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-public class Generateur {
+public class Generateur implements Comparable<Personne> {
+	@Override
+	public int compareTo(Personne personne) {
+        Personne personne1 = personne;
+        return 0;
+	}
+
 	public enum TypePersonne {
 		VENDEUR, CLIENT
 	}

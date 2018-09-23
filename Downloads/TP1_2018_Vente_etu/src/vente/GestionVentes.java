@@ -82,6 +82,16 @@ public class GestionVentes {
 	}
 
 	public void conclureVente(Vendeur vendeur, Vente vente) {
+		Set<Vente> venteTemp = null;
+		if(ventesConclues.containsKey(vendeur)){
+			venteTemp = ventesConclues.get(vendeur);
+			venteTemp.add(vente);
+		} else {
+			venteTemp = new HashSet<>();
+			venteTemp.add(vente);
+			ventesConclues.put(vendeur, venteTemp);
+
+		}
 
 	}
 
@@ -107,12 +117,14 @@ public class GestionVentes {
 	//}
 
 	public void afficherVendeursCroissant(OrdreCroissant ordre) {
+		//vendeursSet.9
 	}
 
 	public void afficherVendeurs3Maps() {
 	}
 
 	public void afficherMeilleursVendeursNbrVentes() {
+
 	}
 
 	public void afficherMeilleursVendeursMontantTotalVentes() {
