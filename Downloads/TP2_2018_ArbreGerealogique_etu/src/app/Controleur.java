@@ -88,7 +88,7 @@ public class Controleur extends Application {
         String enfantnas = vue.NASEnfant.getText();
         String parentnas = vue.NASParent.getText();
 
-		if (enfant.length() != 0 && enfantnas.length != 0) {
+		if (enfant.length() != 0 && enfantnas.length() != 0) {
 			if (parent.length() == 0){
                 parent = null;
                 parentnas=null;
@@ -98,6 +98,8 @@ public class Controleur extends Application {
 			arbreGenealogique.ajouterEnfant(enfant, parent);
 			vue.ajouterEnfant.setText("");
 			vue.ajouterParent.setText("");
+			vue.NASEnfant.setText("");
+			vue.NASParent.setText("");
 		} else {
 			Alert alert = new Alert(AlertType.CONFIRMATION);
 			alert.setTitle("ARBRE GENEALOGIQUE");
@@ -179,13 +181,13 @@ public class Controleur extends Application {
 
 			} else if (e.getSource() == vue.btnAfficherString) {
 
-				for (String pers : arbreGenealogique.transformeSetString()) 
+				for (String pers : arbreGenealogique.transformeSetString())
 					ch += pers + "\n";
 				vue.zoneTexte.setText(ch);
 
 			} else if (e.getSource() == vue.btnAfficherMoins40) {
 
-				for (String pers : arbreGenealogique.getListeString40ansEtMoins()) 
+				for (String pers : arbreGenealogique.getListeString40ansEtMoins())
 					ch += "Prenom : " + pers + "\n";
 
 				vue.zoneTexte.setText(ch);

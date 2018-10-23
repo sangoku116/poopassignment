@@ -134,7 +134,7 @@ public class VueArbreGenealogique {
 		ajouterParent = new TextField();
         
         Label lblNASParent = new Label("NAS du parent :");
-        lblNASEnfant.setFont(Font.font("Arial", FontWeight.BOLD, 13));
+        lblNASParent.setFont(Font.font("Arial", FontWeight.BOLD, 13));
         
         NASParent = new TextField();
 
@@ -145,7 +145,7 @@ public class VueArbreGenealogique {
 
 		vboxAjout = new VBox(10);
 		vboxAjout.setPadding(new Insets(10, 10, 10, 10));
-		vboxAjout.getChildren().addAll(lblAjouterEnfant, ajouterEnfant, lblAjouterParent, ajouterParent, btnAjouter);
+		vboxAjout.getChildren().addAll(lblAjouterEnfant, ajouterEnfant, lblNASEnfant, NASEnfant, lblAjouterParent, ajouterParent, lblNASParent, NASParent, btnAjouter);
 
 		tabAJout.setContent(vboxAjout);
 

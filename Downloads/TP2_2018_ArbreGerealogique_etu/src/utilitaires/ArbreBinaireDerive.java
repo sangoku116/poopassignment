@@ -402,8 +402,7 @@ public class ArbreBinaireDerive<T> implements Serializable{
 	{
 		return ajouterDansListeElement(racine, new ArrayList<>());
 	}
-	public List<String> ajouterDansListeElement(NoeudArbreDerive<T> noeud,
-												List<String> pListe)
+	public List<String> ajouterDansListeElement(NoeudArbreDerive<T> noeud, List<String> pListe)
 	{
 		if (noeud != null)
 		{

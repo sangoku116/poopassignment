@@ -9,10 +9,11 @@ public class Personne {
 	public Personne() {
 	}
 
-	public Personne(String prenom,  int age) {
+	public Personne(String prenom,  int age, String NAS) {
 		super();
 		setPrenom(prenom);
 		setAge(age);
+		setNAS(NAS);
 	}
 
 	public static boolean validerPersonne(String nom, String prenom) {
@@ -50,19 +51,19 @@ public class Personne {
 	public int getAge() {
 		return age;
 	}
-    public int getNAS() {
+    public String getNAS() {
         return NAS;
     }
     public void setNAS(String NAS){
         this.NAS = NAS;
     }
     public boolean validerNAS(String NAS) {
-        return(NAS != null && NAS.length==9 && this.NAS!=NAS);
+        return(NAS != null && NAS.length()==9 && this.NAS!=NAS);
     }
     
 
 	@Override
 	public String toString() {
-		return "Personne [prenom=" + prenom + ", age=" + age + "]";
+		return "Personne [prenom=" + prenom + ", age=" + age + ", NAS=" + NAS + "]";
 	}
 }
